@@ -11,3 +11,12 @@ terraform {
 provider "github" {
   token = var.github_token
 }
+
+# Create a new repository
+resource "github_repository" "kk-portfolio" {
+  name = "kk-portfolio"
+  description = "Kamil Qureshi's portfolio"
+
+  visibility = "private"
+  auto_init = true
+}
